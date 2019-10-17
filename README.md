@@ -5,10 +5,10 @@ itext+freemarker 实现xml转pdf
 
 ### 1、准备模板
 #### 1）、模板相关配置及说明
-    模板目录：所有pdf模板均放在dynamicTemplate/pdf路径下，freemaker会自动扫描模板目录，并加载所有模板
+    模板目录：所有pdf模板均放在resources/template路径下，freemaker会自动扫描模板目录，并加载所有模板
     模板命名规则：后缀均为ftl
-    模板格式：:ftl是Freemarker模板的文件后缀名,是一种xml格式文件。使用PdfTemplateUtils解析模板时，必须
-    使用com.fndsoft.commons.pdf包中支持的模板标签及属性名（后续将继续说明所有支持的标签和属性）
+    模板格式：ftl是Freemarker模板的文件后缀名,是一种xml格式文件。使用PdfTemplateUtils解析模板时，必须
+    使用pdf包中支持的模板标签及属性名
 
 #### 2)、pdf模板标签
 ##### a)、标签详细说明：

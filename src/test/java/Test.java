@@ -32,7 +32,7 @@ public class Test {
         dataMap.put("paragraph","new page,these are LineSeparators:");
         dataMap.put("testList",list);
 
-        FileOutputStream fos = new FileOutputStream(new File("D:\\test.pdf"));
+        FileOutputStream fos = new FileOutputStream(new File("/home/hf/test.pdf"));
         PdfTemplateUtils.createPdfByTemplate(TEST_TEMPLATE_NAME,dataMap,fos);
     }
 }

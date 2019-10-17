@@ -76,7 +76,15 @@ public class ParserUtils {
             case "yellow":
                 return BaseColor.YELLOW;
             default:
-                return new BaseColor(Integer.parseInt(color.replace("#",""),16));
+            	if(!color.matches("^#[0-9A-Fa-f]{6}$")) {
+            		return new BaseColor(0,0,0);
+            	}
+        		int red = Integer.parseInt(color.substring(1, 3),16);
+            	int green = Integer.parseInt(color.substring(3, 5),16);
+            	int blue = Integer.parseInt(color.substring(5, 7),16);
+            	
+            	return new BaseColor(red,green,blue);
+            
         }
     }
 }

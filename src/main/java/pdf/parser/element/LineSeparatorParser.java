@@ -1,5 +1,6 @@
 package pdf.parser.element;
 
+import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.pdf.draw.LineSeparator;
 import org.dom4j.Attribute;
 import org.dom4j.Element;
@@ -46,6 +47,12 @@ public class LineSeparatorParser extends BaseParser {
                     lineSeparator.setLineWidth(Float.parseFloat(attrValue));
                     //lineSeparator.
                     break;
+                case "percentage":
+                	lineSeparator.setPercentage(Float.parseFloat(attrValue));
+                	break;
+                case "color":
+                	lineSeparator.setLineColor(ParserUtils.getBaseColor(attrValue));
+                	break;
                 default:
                     throw new Exception("未知的LineSeparator属性：" + attrName);
             }

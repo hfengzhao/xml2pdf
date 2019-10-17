@@ -24,7 +24,10 @@ public class ParserFactory {
                 return ParagraphParser.getInstance();
             case "line":
                 return LineSeparatorParser.getInstance();
-
+            case "chunk":
+            	return ChunkParser.getInstance();
+            case "image":
+            	return ImageParser.getInstance();
             // font标签
             case "font":
                 return FontParser.getInstance();

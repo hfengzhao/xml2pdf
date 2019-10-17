@@ -16,8 +16,10 @@
     <paragraph space-after="25" space-before="5" font-ref="content-font" text="${paragraph}"
                first-line-indent="18" align="left"></paragraph>
 
-    <line align="center" width="10"></line>
+    <line align="center" color="#BBAFFF" width="10" percentage="20"></line>
 
     <line offset="20.0" width="1"></line>
-
+    <chunk text="this is chunk" background="#96CDCD" generic-tag="test" v-scaling="3" line-height="7" ></chunk>
+    
+	<image src="classpath:sky.jpg" border="top,bottom,left,box" border-width="2" border-color="#AF273A"  ></image>
 </PDFRoot>

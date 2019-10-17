@@ -106,6 +106,24 @@ public class PdfCellParser extends BaseParser {
                 case "padding-top":
                     cell.setPaddingTop(Float.parseFloat(attrValue));
                     break;
+                case "background-color":
+                	cell.setBackgroundColor(ParserUtils.getBaseColor(attrValue));
+                	break;
+                case "border-color":
+                	cell.setBorderColor(ParserUtils.getBaseColor(attrValue));
+                	break;
+                case "top-border-color":
+                	cell.setBorderColorTop(ParserUtils.getBaseColor(attrValue));
+                	break;
+                case "bottom-border-color":
+                	cell.setBorderColorBottom(ParserUtils.getBaseColor(attrValue));
+                	break;
+                case "left-border-color":
+                	cell.setBorderColorLeft(ParserUtils.getBaseColor(attrValue));
+                	break;
+                case "right-bordor-color":
+                	cell.setBorderColorRight(ParserUtils.getBaseColor(attrValue));
+                	break;
                 default:
                     throw new Exception("未知的Cell属性：" + attrName);
             }
